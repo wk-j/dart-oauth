@@ -31,3 +31,5 @@ Future<oauth2.Client> getClient() async {
   // var request = await listen(redirectUrl);
   // return await grant.handleAuthorizationResponse(request.uri.queryParameters);
 }
+
+main() async {}
