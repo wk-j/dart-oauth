@@ -1,7 +1,4 @@
-## Dart
+A web server built using [Shelf](https://pub.dartlang.org/packages/shelf).
 
-```bash
-pub global activate stagehand
-stagehand console-full
-pub get
-```
+Created from templates made available by Stagehand under a BSD-style
+[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
