@@ -1,4 +1,17 @@
-A web server built using [Shelf](https://pub.dartlang.org/packages/shelf).
+## Dart
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+```bash
+pub global activate stagehand
+pub global activate webdev
+
+stagehand web-simple
+webdev serve
+
+stagehand server-shelf
+dart bin/server.dart
+```
+
+```diff
+dependencies:
++ oauth2: ^1.3.0
+```
