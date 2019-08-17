@@ -18,6 +18,7 @@ Future<oauth2.Client> getClient() async {
   if (exists) {
     var credentials =
         new oauth2.Credentials.fromJson(await credentialsFile.readAsString());
+
     return new oauth2.Client(credentials,
         identifier: identifier, secret: secret);
   }
@@ -26,10 +27,15 @@ Future<oauth2.Client> getClient() async {
       identifier, endpoint, tokenEndpoint,
       secret: secret);
 
+  var url = grant.getAuthorizationUrl(redirectUrl);
+  print(url);
+
   // await redirect(grant.getAuthorizationUrl(redirectUrl));
 
   // var request = await listen(redirectUrl);
   // return await grant.handleAuthorizationResponse(request.uri.queryParameters);
 }
 
-main() async {}
+main() async {
+  await getClient();
+}
